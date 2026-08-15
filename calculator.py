@@ -10,10 +10,13 @@ def multiply(a, b):
 def divide(a,b):
     return a/b
 
+def power(a, b):
+    return a ** b
+
 num1 = float(input("Enter the first number: "))
 num2 = float(input("Enter the second number: "))
 
-operation = input("Enter the operation |    + - / *   |: ")
+operation = input("Enter the operation |    + - / * ^   |: ")
 if operation == "/" and num2 == 0:
     print("Cannot divide by zero")
     exit()
@@ -27,6 +30,8 @@ elif operation == "*":
     result = multiply(num1,num2)
 elif operation == "/":
     result = divide(num1,num2)
+elif operation == "^":
+    result = power(num1,num2)
 else:
     result = "Invalid operation"
 
